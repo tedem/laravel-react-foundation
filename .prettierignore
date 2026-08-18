@@ -1,2 +1,30 @@
-resources/js/components/ui/*
-resources/views/mail/*
+# Dependencies
+node_modules/
+vendor/
+
+# Build output
+public/build/
+public/hot/
+
+# Laravel runtime
+storage/
+bootstrap/cache/
+
+# Cache
+.phpunit.cache/
+
+# Generated components / templates
+resources/js/components/ui/**
+resources/views/mail/**
+
+# Environment
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
