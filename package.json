@@ -10,7 +10,18 @@
     "format:check": "prettier . --check",
     "lint": "eslint . --fix",
     "lint:check": "eslint .",
-    "types:check": "tsc --noEmit"
+    "types:check": "tsc --noEmit",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*": [
+      "eslint . --fix",
+      "prettier --write . --ignore-unknown"
+    ],
+    "**/*.php": [
+      "vendor/bin/rector process",
+      "vendor/bin/pint"
+    ]
   },
   "devDependencies": {
     "@commitlint/cli": "^21.2.2",
